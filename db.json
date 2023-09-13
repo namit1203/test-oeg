@@ -1,0 +1,155 @@
+{
+  "users": [
+    {
+      "username": "user1",
+      "password": "0ofSW6NX",
+      "id": 1
+    },
+    {
+      "username": "user2",
+      "password": "L4dBXoMo",
+      "id": 2
+    },
+    {
+      "username": "user11",
+      "password": "0ofSW6NX",
+      "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "id": 10
+    },
+    {
+      "id": 11
+    },
+    {
+      "username": "user111",
+      "password": "0ofSW6NX",
+      "id": 12
+    }
+  ],
+  "Team": [
+    {
+      "name": "TEST",
+      "game_type": "",
+      "contact_type": "",
+      "contact_detail": "",
+      "location": "",
+      "id": 1
+    },
+    {
+      "name": "TEST1",
+      "game_type": "LOL",
+      "contact_type": "Email",
+      "contact_detail": "namir291203@gmail.com",
+      "location": "VN",
+      "id": 3
+    },
+    {
+      "name": "TEST21",
+      "game_type": "LOL",
+      "contact_type": "Email",
+      "contact_detail": "namir291203@gmail.com",
+      "location": "VN",
+      "id": 4
+    },
+    {
+      "name": "TEST21",
+      "game_type": "LOL",
+      "contact_type": "Email",
+      "contact_detail": "namir291203@gmail.com",
+      "location": "VN",
+      "id": 5
+    },
+    {
+      "teamName": "FPT",
+      "gameType": "lol",
+      "contactType": "email",
+      "contactDetail": "namit291203@gmail.com",
+      "location": "VN",
+      "id": 7
+    },
+    {
+      "teamName": "FPT1",
+      "gameType": "lol",
+      "contactType": "email",
+      "contactDetail": "namit291203@gmail.com",
+      "location": "VN",
+      "id": 8
+    },
+    {
+      "teamName": "FPT",
+      "gameType": "lol",
+      "contactType": "email",
+      "contactDetail": "1",
+      "location": "VN",
+      "id": 9
+    },
+    {
+      "name": "TEST21",
+      "game_type": "LOL",
+      "contact_type": "Email",
+      "contact_detail": "namir291203@gmail.com",
+      "location": "VN",
+      "id": 10
+    }
+  ],
+  "Tournament": [
+    {
+      "type": "free",
+      "name": "Vòng loại TPĐC Mùa Đông 2023 - Đại Học FPT Hà Nội",
+      "game_type": "League Of Legends",
+      "start_date": "2023-09-13T11:51",
+      "end_date": "2023-09-16T11:51",
+      "tournament_format": "single_elimination",
+      "total_team": "4",
+      "prize_1": "500,000 VNĐ",
+      "description": "dd",
+      "checkin_time": "10",
+      "id": 1
+    },
+    {
+      "type": "free",
+      "name": "Le Nam",
+      "game_type": "League Of Legends",
+      "start_date": "2023-09-14T11:52",
+      "end_date": "2023-09-24T11:52",
+      "tournament_format": "single_elimination",
+      "total_team": "4",
+      "prize_1": "500,000 VNĐ",
+      "description": "dd",
+      "checkin_time": "10",
+      "id": 2
+    },
+    {
+      "type": "free",
+      "image-link": "https://lienquan.garena.vn/files/upload/images/KV%20C%C3%94NG%20B%E1%BB%90%20CH%C3%8DNH%20TH%E1%BB%A8C.jpg",
+      "game_type": "League Of Legends",
+      "name": "Le Nam",
+      "start_date": "2023-09-13T11:55",
+      "end_date": "2023-09-17T11:56",
+      "tournament_format": "single_elimination",
+      "total_team": "4",
+      "prize_1": "500,000 VNĐ",
+      "description": "dd",
+      "checkin_time": "10",
+      "id": 3
+    },
+    {
+      "type": "free",
+      "image-link": "https://lienquan.garena.vn/files/upload/images/KV%20C%C3%94NG%20B%E1%BB%90%20CH%C3%8DNH%20TH%E1%BB%A8C.jpg",
+      "game_type": "League Of Legends",
+      "name": "Le Nam",
+      "start_date": "2023-09-13T11:55",
+      "end_date": "2023-09-17T11:56",
+      "tournament_format": "single_elimination",
+      "total_team": "4",
+      "prize_1": "500,000 VNĐ",
+      "description": "dd",
+      "checkin_time": "10",
+      "id": 4
+    }
+  ]
+}
