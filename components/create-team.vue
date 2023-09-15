@@ -66,49 +66,37 @@
     </template>
 
 <script setup>
-function submitForm(event) {
-  event.preventDefault(); // Prevent the default form submission
-  const contactType = document.getElementById('contactType').value;
-    const contactDetail = document.getElementById('contactDetail').value;
+import { useTeamStore } from '../server/RestAPI/index';
 
-    // Check if contact type is "Email" and validate the email format
-    if (contactType === 'email' && !isValidEmail(contactDetail)) {
-      alert('Invalid email address. Please enter a valid email address.');
-      return;
-    }
-    function isValidEmail(email) {
-    const emailRegex = /^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
-    return emailRegex.test(email);
+const teamStore = useTeamStore();
+
+function submitForm(event) {
+  event.preventDefault();
+
+  const contactType = document.getElementById('contactType').value;
+  const contactDetail = document.getElementById('contactDetail').value;
+
+  if (contactType === 'email' && !isValidEmail(contactDetail)) {
+    alert('Invalid email address. Please enter a valid email address.');
+    return;
   }
-  // Get the form data
+
   const formData = new FormData(event.target);
 
-  // Convert form data to JSON
   const jsonData = {};
   formData.forEach((value, key) => {
     jsonData[key] = value;
   });
-console.log(jsonData)
-  // Send a POST request to the server with JSON data
-  fetch('http://localhost:3001/Team', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json', // Set the content type to JSON
-    },
-    body: JSON.stringify(jsonData), // Convert JSON data to a string
-  })
-    .then(response => {
-      if (response.ok) {
-        // Handle success
-      } else {
-        // Handle error
-      }
-    })
-    .catch(error => {
-      // Handle network error or other errors
-    });
+
+  teamStore.createTeam(jsonData); // Call the store's action to create a team
+}
+
+function isValidEmail(email) {
+  const emailRegex = /^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
+  return emailRegex.test(email);
 }
 </script>
+
 
 <style lang="scss" scoped>
 </style>

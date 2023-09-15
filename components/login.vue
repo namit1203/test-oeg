@@ -55,43 +55,37 @@
   </template>
   
   <script setup>
+  import { useAuthStore } from '../server/RestAPI/index';
   import { ref } from 'vue';
-  
-  const router = useRouter();
+  const router = useRouter()
+  const authStore = useAuthStore();
   const username = ref('');
   const password = ref('');
   const msg = ref('');
   const successMsg = ref('');
   
   const submitForm = () => {
-    fetch('http://localhost:3001/users', {
-      method: 'GET',
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        const user = data.find(
-          (user) => user.username === username.value && user.password === password.value
-        );
-  
-        if (user) {
-          // Assuming you have a named route for the homepage called 'home'
-          router.push({ path: '/' })
-          successMsg.value = 'Login successful!'; 
-          msg.value = '';
-        } else {
-          // Invalid username or password
-          msg.value = 'Invalid username or password';
-          successMsg.value = '';
-        }
-      })
-      .catch((error) => {
-        console.error('Error fetching data:', error);
-        msg.value = 'An error occurred. Please try again later.';
-        successMsg.value = ''; 
-      });
+    const users = authStore.users;
+    
+    authStore.fetchUsers()
+    console.log(authStore.users)
+    const user = users.find(
+      (user) => user.username === username.value && user.password === password.value
+
+    );
+   
+    if (user) {
+      router.push({ path: '/' });
+      successMsg.value = 'Login successful!';
+      msg.value = '';
+    } else {
+      // Invalid username or password
+      msg.value = 'Invalid username or password';
+      successMsg.value = '';
+    }
   };
   </script>
-
+  
   
   <style scoped>
   /* Add any custom CSS styles here */
