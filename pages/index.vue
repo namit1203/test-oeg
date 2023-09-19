@@ -25,7 +25,7 @@ definePageMeta({
     layout: 'default'
 })
 </script>
-
+    
 <style scoped>
 h2 {
     margin-top: 20px;

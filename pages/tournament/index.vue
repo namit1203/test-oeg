@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-        <img alt="" class=" object-cover w-full" src="https://images2.alphacoders.com/570/570396.jpg">
+        <img alt="" class=" object-cover w-full h-50" src="https://images2.alphacoders.com/570/570396.jpg">
     </div>
     <div class="slider-item__intro">
         <div class="slider-item__intro__inner container text-left xs:ml-2 sm:ml-8">
@@ -65,7 +65,7 @@ const handleClick = () => {
   setTimeout(() => {
     itemShow.value += 6;
     loading.value = false; // Set loading to false after the timeout
-  }, 2000);
+  }, 100);
 };
 </script>
 

@@ -7,8 +7,8 @@
                   <Icon style="margin-right: 10px; color:white" class="menu-vertical-icon" name="ion:game-controller" />
                   <span>My tournaments</span>
                 </li>
-                <li>
-                  <Icon style="margin-right: 10px; color:white" class="menu-vertical-icon" name="ic:outline-settings" />
+                <li @click="handleCreateTournamentClick">
+                  <Icon style="margin-right: 10px; color: white" class="menu-vertical-icon" name="ic:outline-settings" />
                   <span>Tournament creating</span>
                 </li>
                <span style="font-weight: lighter;"> __________________________</span>
@@ -34,6 +34,10 @@
         </div>
     </div>
 </template>
+
+<script>
+
+</script>
 
 <style scoped>
 *{

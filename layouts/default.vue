@@ -146,8 +146,8 @@ div {
     background-color: rgb(22 26 34 / var(--tw-bg-opacity));
 }
 .ant-layout-footer {
-  background-color: #2E2E2E; /* Màu nền tím than */
-  color: white; /* Màu chữ trắng */
+  background-color: #2E2E2E; 
+  color: white; 
 }
 #root {
     height: 100%;
@@ -170,7 +170,7 @@ body {
     margin: 0;
     color: #000000d9;
     font-size: 14px;
-    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
+    font-family: Helvetica Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji", Symbol,"Noto Color Emoji";
     font-variant: tabular-nums;
     line-height: 1.5715;
     background-color: #fff;
@@ -182,7 +182,7 @@ html {
     -moz-tab-size: 4;
     -o-tab-size: 4;
     tab-size: 4;
-    font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
+    font-family: ui-sans-serif,system-ui,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji" Symbol,"Noto Color Emoji";
     font-feature-settings: normal;
     font-variation-settings: normal;
 }
