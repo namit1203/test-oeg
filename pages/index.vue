@@ -3,19 +3,19 @@
         <div>
             <img alt="" class=" object-cover w-full" src="https://beta.ugesports.xyz/assets/banner-01.f88e9bb5.jpg">
         </div>
-        <div class="slider-item__intro">
-            <div class="slider-item__intro__inner container text-left xs:ml-2 sm:ml-8">
-                <h3 class="uppercase flex flex-col sm:max-w-[70%]">
-                    <span class="uppercase">Nền tảng </span>
-                    <strong class="uppercase">dành riêng cho các giải đấu Esports.</strong>
-                </h3>
-                <p class="text-neutral-40 font-thin xs:my-4 sm:max-w-[60%] sm:my-8"
-                    style="font-family: Inter; font-size: 20px;">
-                    Tìm kiếm giải đấu cho game yêu thích của bạn, thi đấu, gia nhập cộng đồng game thủ. Tất cả sẽ được
-                    tích hợp trên nền tảng Underground Esports
-                </p>
+            <div class="slider-item__intro">
+                <div class="slider-item__intro__inner container text-left sm:ml-8">
+                    <h3 class="uppercase flex flex-col sm:max-w-[70%]">
+                        <span class="uppercase">Nền tảng </span>
+                        <strong class="uppercase">dành riêng cho các giải đấu Esports.</strong>
+                    </h3>
+                    <p class="text-neutral-40 font-thin xs:my-4 sm:max-w-[60%] sm:my-8"
+                        style="font-family: Inter; font-size: 20px;">
+                        Tìm kiếm giải đấu cho game yêu thích của bạn, thi đấu, gia nhập cộng đồng game thủ. Tất cả sẽ được
+                        tích hợp trên nền tảng Underground Esports
+                    </p>
+                </div>
             </div>
-        </div>
     </div>
     
 </template>
@@ -96,4 +96,4 @@ header {
         max-width: 70%;
     }
 }
-</style> -->
+</style>

@@ -12,6 +12,8 @@
       "totalTeam": 16,
       "registrationFee": "500,000 vnđ",
       "tournamentFormat": "Single Elimination",
+      "checkinTime": "30 phút trước khi giải đấu bắt đầu",
+      "teamSize": "1vs1",
       "image": "https://cdn.oneesports.vn/cdn-data/sites/4/2023/02/FO4-Nga-dong-cua-thumb.jpg"
     },
     {
