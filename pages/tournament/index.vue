@@ -17,6 +17,21 @@
     </div>
 </div>
 
+<div class="upcoming">
+<strong class="uppercase">Upcoming Tournament</strong>
+</div>
+
+<div class="sort-tour">
+  <label for="sortBy"></label>
+  <select v-model="selectedGame" id="sortBy" @change="sortTournaments">
+    <option value="All Games">All Games</option>
+    <option v-for="game in uniqueGames" :value="game">{{ game }}</option>
+  </select>
+</div>
+
+
+
+
   <div>
     <div class="tournament-grid">
       <div class="grid grid-cols-2 gap-5">
@@ -60,16 +75,79 @@ const itemShow = ref(10);
 const arr = computed(() => tournaments.value.slice(0, itemShow.value));
 const loading = ref(false);
 
+const selectedGame = ref('All Games');
+
+
+const sortTournaments = () => {
+  if (selectedGame.value === 'All Games') {
+    itemShow.value = 10;
+  } else {
+    // filter and sort tournaments by selected game type
+    const sortedTournaments = tournaments.value
+      .filter((tournament) => tournament.gameType === selectedGame.value)
+      .slice(0, 10); // adjust the number of tournaments displayed as needed
+
+    // update arr with the sorted tournaments
+    arr.value = sortedTournaments;
+  }
+};
+
+
+const uniqueGames = computed(() => {
+  
+  const uniqueGameTypes = [];
+  //loop through tournaments and add unique game types to arrays
+  tournaments.value.forEach((tournament) => {
+    if(!uniqueGameTypes.includes(tournament.gameType)){
+      uniqueGameTypes.push(tournament.gameType);
+    }
+  });
+  return uniqueGameTypes;
+})
+
+
+
 const handleClick = () => {
-  loading.value = true; // Set loading to true before the timeout
+  loading.value = true; // set loading to true before the timeout
   setTimeout(() => {
     itemShow.value += 6;
-    loading.value = false; // Set loading to false after the timeout
-  }, 100);
+    loading.value = false; // set loading to false after the timeout
+  }, 2000);
 };
 </script>
 
 <style>
+.sort-tour{
+  margin-top: 20px;
+  margin-left: 200px;
+  max-width: 170px;
+  max-height: 32px;
+  border-radius: 0.375rem;
+  background-color: white; 
+  border: 1px solid #655c5c; 
+  padding: 4px; 
+}
+.upcoming{
+  font-style: normal;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 36px;
+    margin: 20px 0 0 200px;
+    font-weight: bold;
+    background: linear-gradient(0deg, #ff006b 0%, #885fff 101.5%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+b, strong {
+  font-weight: bolder;
+}
 .slider-item__intro {
   position: absolute;
   left: 0;
@@ -128,7 +206,7 @@ const handleClick = () => {
 }
 
 .tournament-grid{
-  padding: 50px 200px 0px 200px;
+  padding: 20px 200px 0px 200px;
 }
 .loading-indicator {
   display: flex;
@@ -229,4 +307,5 @@ const handleClick = () => {
   margin-top: 5px;
   font-size: 1.5rem;
 }
+
 </style>

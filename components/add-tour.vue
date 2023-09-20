@@ -117,13 +117,13 @@ export default {
 
     const submitForm = async () => {
       try {
-        // Create an object with tournament data based on the form fields
+        // create an object with tournament data based on the form fields
         const startDateTime = new Date(startDate.value);
         const endDateTime = new Date(endDate.value);
-        // Check if the start date is greater than or equal to the end date
+        // check if the start date is greater than or equal to the end date
         if (startDateTime >= endDateTime) {
           dateValidationError.value = 'Start date must be before end date.';
-          return; // Prevent form submission if validation fails
+          return; 
         }
 
         const newTournamentData = {
@@ -139,12 +139,12 @@ export default {
           description: document.querySelector('textarea[name="description"]').value,
         };
 
-        // Call the addTournament function from the store
+        // call the addTournament function from the store
         const addedTournament = await tournamentStore.addTournament(newTournamentData);
 
-        // Reset the form fields after successfully adding the tournament
+        // reset the form fields after successfully adding the tournament
         document.querySelector('select[name="type"]').value = '';
-        // Reset other form fields similarly
+
 
         console.log('Added tournament:', addedTournament);
       } catch (error) {

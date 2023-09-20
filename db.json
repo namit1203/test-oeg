@@ -19,6 +19,7 @@
     {
       "id": 3,
       "title": "League of Legends Championship",
+      "gameType": "League of Legends",
       "host": "Riot Games",
       "place": "Summoner's Rift",
       "award": "10,000,000 vnđ",
@@ -32,6 +33,7 @@
     {
       "id": 4,
       "title": "CS:GO Pro League",
+      "gameType": "CS:GO",
       "host": "Valve",
       "place": "CSGO Arena",
       "award": "7,500,000 vnđ",
@@ -45,6 +47,7 @@
     {
       "id": 5,
       "title": "Valorant Masters",
+      "gameType":"Valorant",
       "host": "Riot Games",
       "place": "Valorant Arena",
       "award": "8,000,000 vnđ",
@@ -58,6 +61,7 @@
     {
       "id": 6,
       "title": "Overwatch League Grand Finals",
+      "gameType":"Overwatch",
       "host": "Blizzard Entertainment",
       "place": "Various Locations",
       "image": "https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt8acb81e3851f58b2/6480c8a5f7e25112a1a014d9/ow2_xboxshowcase_static_7.png",
@@ -66,6 +70,7 @@
     {
       "id": 7,
       "title": "Rainbow Six Siege Invitational",
+      "gameType": "Rainbow Six Siege",
       "host": "Ubisoft",
       "place": "Various Locations",
       "image": "https://cdn.akamai.steamstatic.com/steam/apps/359550/capsule_616x353.jpg?t=1692727022",
@@ -74,6 +79,7 @@
     {
       "id": 8,
       "title": "Call of Duty World Championship",
+      "gameType": "Call of Duty",
       "host": "Activision",
       "place": "Various Locations",
       "image": "https://d9n64ieh9hz8y.cloudfront.net/wp-content/uploads/20221104224840/call-of-duty-modern-warfare-ii-danh-gia-game.jpg",
@@ -192,7 +198,7 @@
     {
       "type": "payable",
       "image": "https://www.skinwallet.com/csgo/wp-content/uploads/2020/01/maxresdefault.jpg",
-      "gameType": "csgo",
+      "gameType": "CS:GO",
       "title": "IEM Katowice 2023",
       "startDate": "2023-09-23T11:32",
       "endDate": "2023-09-27T11:32",
@@ -205,7 +211,7 @@
     {
       "type": "payable",
       "image": "https://www.skinwallet.com/csgo/wp-content/uploads/2020/01/maxresdefault.jpg",
-      "gameType": ">Counter-Strike: Global Offensive",
+      "gameType": "CS:GO",
       "title": "CS2",
       "startDate": "2023-09-08T07:54:00.000Z",
       "endDate": "2023-09-30T07:54:00.000Z",
@@ -218,7 +224,7 @@
     {
       "type": "payable",
       "image": "https://www.skinwallet.com/csgo/wp-content/uploads/2020/01/maxresdefault.jpg",
-      "gameType": ">Counter-Strike: Global Offensive",
+      "gameType": "CS:GO",
       "title": "CS2",
       "startDate": "2023-09-08T07:54:00.000Z",
       "endDate": "2023-09-30T07:54:00.000Z",
