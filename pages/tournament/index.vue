@@ -21,12 +21,19 @@
 <strong class="uppercase">Upcoming Tournament</strong>
 </div>
 
-<div class="sort-tour">
-  <label for="sortBy"></label>
-  <select v-model="selectedGame" id="sortBy" @change="sortTournaments">
-    <option value="All Games">All Games</option>
-    <option v-for="game in uniqueGames" :value="game">{{ game }}</option>
-  </select>
+
+<div>
+  <div class="sort-tour">
+    <label for="sortBy"></label>
+    <select v-model="selectedGame" id="sortBy" @change="sortTournaments">
+      <option value="All Games">All Games</option>
+      <option v-for="game in uniqueGames" :value="game">{{ game }}</option>
+    </select>
+  </div>
+  
+  <div v-for="tournament in sortTournaments" :key="tournament.id">
+    
+  </div>
 </div>
 
 
@@ -67,6 +74,7 @@
 
 <script setup>
 import { ref, computed } from 'vue';
+import { useTournamentStore } from '~/store/useTournamentStore';
 
 const { data: tournaments } = await useFetch('http://localhost:3000/tournaments');
 console.log(tournaments);
@@ -77,6 +85,16 @@ const loading = ref(false);
 
 const selectedGame = ref('All Games');
 
+const uniqueGames = computed(() => {
+  const uniqueGameTypes = [];
+  tournaments.value.forEach((tournament) => {
+    if (!uniqueGameTypes.includes(tournament.gameType) ) {
+      uniqueGameTypes.push(tournament.gameType);
+    }
+  });
+  return uniqueGameTypes;
+});
+  
 
 const sortTournaments = () => {
   if (selectedGame.value === 'All Games') {
@@ -85,27 +103,11 @@ const sortTournaments = () => {
     // filter and sort tournaments by selected game type
     const sortedTournaments = tournaments.value
       .filter((tournament) => tournament.gameType === selectedGame.value)
-      .slice(0, 10); // adjust the number of tournaments displayed as needed
+      .slice(0, 10); 
 
-    // update arr with the sorted tournaments
-    arr.value = sortedTournaments;
+    tournaments.value = sortedTournaments;
   }
 };
-
-
-const uniqueGames = computed(() => {
-  
-  const uniqueGameTypes = [];
-  //loop through tournaments and add unique game types to arrays
-  tournaments.value.forEach((tournament) => {
-    if(!uniqueGameTypes.includes(tournament.gameType)){
-      uniqueGameTypes.push(tournament.gameType);
-    }
-  });
-  return uniqueGameTypes;
-})
-
-
 
 const handleClick = () => {
   loading.value = true; // set loading to true before the timeout
@@ -114,6 +116,11 @@ const handleClick = () => {
     loading.value = false; // set loading to false after the timeout
   }, 2000);
 };
+
+const taskTour = useTournamentStore()
+
+
+
 </script>
 
 <style>
@@ -126,6 +133,7 @@ const handleClick = () => {
   background-color: white; 
   border: 1px solid #655c5c; 
   padding: 4px; 
+
 }
 .upcoming{
   font-style: normal;

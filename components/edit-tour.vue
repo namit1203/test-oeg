@@ -3,34 +3,34 @@
         <h1>Edit Tournament</h1>
         <form @submit.prevent="updateTournament">
             <label for="title">Title:</label>
-            <input v-model="updatedTournament.title" id="title" />
+            <input v-model="updatedTournament.title" id="title" class="border rounded-md p-2 w-full" />
     
             <label for="gameType">Game Type:</label>
-            <input v-model="updatedTournament.gameType" id="gameType" />
+            <input v-model="updatedTournament.gameType" id="gameType" class="border rounded-md p-2 w-full"/>
     
             <label for="host">Host:</label>
-            <input v-model="updatedTournament.host" id="host" />
+            <input v-model="updatedTournament.host" id="host" class="border rounded-md p-2 w-full"/>
     
             <label for="place">Place:</label>
-            <input v-model="updatedTournament.place" id="place" />
+            <input v-model="updatedTournament.place" id="place" class="border rounded-md p-2 w-full"/>
     
             <label for="award">Award:</label>
-            <input v-model="updatedTournament.award" id="award" />
+            <input v-model="updatedTournament.award" id="award" class="border rounded-md p-2 w-full"/>
     
             <label for="startDate">Start Date:</label>
-            <input type="date" v-model="updatedTournament.startDate" id="startDate" />
+            <input type="datetime-local" v-model="updatedTournament.startDate" class="border rounded-md p-2 w-full" id="startDate" />
     
             <label for="endDate">End Date:</label>
-            <input type="date" v-model="updatedTournament.endDate" id="endDate" />
+            <input type="datetime-local" v-model="updatedTournament.endDate" class="border rounded-md p-2 w-full" id="endDate" />
     
             <label for="totalTeam">Total Teams:</label>
-            <input type="number" v-model="updatedTournament.totalTeam" id="totalTeam" />
+            <input type="number" v-model="updatedTournament.totalTeam"  id="totalTeam" class="border rounded-md p-2 w-full"/>
     
             <label for="registrationFee">Registration Fee:</label>
-            <input v-model="updatedTournament.registrationFee" id="registrationFee" />
+            <input v-model="updatedTournament.registrationFee" id="registrationFee" class="border rounded-md p-2 w-full" />
     
             <label for="tournamentFormat">Tournament Format:</label>
-            <input v-model="updatedTournament.tournamentFormat" id="tournamentFormat" />
+            <input v-model="updatedTournament.tournamentFormat" id="tournamentFormat" class="border rounded-md p-2 w-full"/>
     
 
     

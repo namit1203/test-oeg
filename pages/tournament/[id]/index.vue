@@ -157,7 +157,8 @@
                   src="https://beta.ugesports.xyz/assets/prize-gold.b8416faa.svg"></div>
               <p class="text-sm font-light text-yellow-60">1st</p>
             </div>
-            <p class="font-bold text-base text-center">3.000.000 ₫</p>
+           <p class="font-bold text-base text-center">{{ (2/3) * tournament.award }}</p>
+
           </div>
           <div class="mr-2 items-center">
             <div class="flex flex-row items-end mb-2">
@@ -229,7 +230,7 @@ const { data: tournament } = await useFetch(uri);
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   max-width: 1128px;
-  max-height: 400px;
+  max-height: 405px;
   margin-left: 200px;
   margin-top: 63px;
   top: 0;

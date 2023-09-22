@@ -25,8 +25,11 @@
       "award": "10,000,000 vnđ",
       "startDate": "2023-11-10",
       "endDate": "2023-11-15",
-      "participants": 24,
+      "totalTeam": 24,
       "registrationFee": "800,000 vnđ",
+      "tournamentFormat": "Single Elimination",
+      "checkinTime":"30 phút trước khi giải đấu bắt đầu",
+      "teamSize": "5vs5",
       "image": "https://www.dexerto.com/cdn-cgi/image/width=3840,quality=75,format=auto/https://editors.dexerto.com/wp-content/uploads/2021/12/14/league-of-legends-2022-patch-schedule-all-lol-season-12-updates-changes.jpg",
       "website": "https://example.com/lol-championship"
     },
@@ -39,15 +42,18 @@
       "award": "7,500,000 vnđ",
       "startDate": "2023-12-05",
       "endDate": "2023-12-10",
-      "participants": 20,
+      "totalTeam": 20,
       "registrationFee": "600,000 vnđ",
+      "tournamentFormat": "Single Elimination",
+      "checkinTime":"30 phút trước khi giải đấu bắt đầu",
+      "teamSize": "5vs5",
       "image": "https://genk.mediacdn.vn/139269124445442048/2023/3/23/cs2-1679530147879794733797-1679530422473-16795304225911207505362.png",
       "website": "https://example.com/csgo-pro-league"
     },
     {
       "id": 5,
       "title": "Valorant Masters",
-      "gameType":"Valorant",
+      "gameType": "Valorant",
       "host": "Riot Games",
       "place": "Valorant Arena",
       "award": "8,000,000 vnđ",
@@ -61,7 +67,7 @@
     {
       "id": 6,
       "title": "Overwatch League Grand Finals",
-      "gameType":"Overwatch",
+      "gameType": "Overwatch",
       "host": "Blizzard Entertainment",
       "place": "Various Locations",
       "image": "https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt8acb81e3851f58b2/6480c8a5f7e25112a1a014d9/ow2_xboxshowcase_static_7.png",
@@ -233,6 +239,19 @@
       "award": "1,000,000 vnđ",
       "description": "1",
       "id": 27
+    },
+    {
+      "type": "free",
+      "image": "https://mega.com.vn/media/news/0905_Hinh-nen.jpg",
+      "gameType": "LQ",
+      "title": "Liên Quân Mobile: Đấu trường danh vọng",
+      "startDate": "2023-09-30T02:00:00.000Z",
+      "endDate": "2023-10-10T02:00:00.000Z",
+      "tournamentFormat": "Single Elimination",
+      "totalTeam": "16",
+      "award": "1,000,000 vnđ",
+      "description": "ko",
+      "id": 28
     }
   ],
   "comments": [

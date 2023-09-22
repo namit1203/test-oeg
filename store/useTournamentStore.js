@@ -92,5 +92,6 @@ export const useTournamentStore = defineStore('tournamentStore', {
         throw error;
       }
     },
+    
   },
 });
