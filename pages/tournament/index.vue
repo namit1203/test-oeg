@@ -1,40 +1,39 @@
 <template>
   <div>
     <div>
-        <img alt="" class=" object-cover w-full h-50" src="https://images2.alphacoders.com/570/570396.jpg">
+      <img alt="" class=" object-cover w-full h-50" src="https://images2.alphacoders.com/570/570396.jpg">
     </div>
     <div class="slider-item__intro">
-        <div class="slider-item__intro__inner container text-left xs:ml-2 sm:ml-8">
-            <h3 class="uppercase flex flex-col sm:max-w-[70%]">
-                <span class="uppercase">Nhanh lên nào!</span>
-                <strong class="uppercase">Các giải đấu đang sắp đầy lượt đăng ký.</strong>
-            </h3>
-            <p class="text-neutral-40 font-thin xs:my-4 sm:max-w-[60%] sm:my-8"
-                style="font-family: Inter; font-size: 20px;">
-                Cùng tham gia không giới hạn các giải đấu tại UGE để cạnh tranh và nhận phần thưởng hấp dẫn!
-            </p>
-        </div>
+      <div class="slider-item__intro__inner container text-left xs:ml-2 sm:ml-8">
+        <h3 class="uppercase flex flex-col sm:max-w-[70%]">
+          <span class="uppercase">Nhanh lên nào!</span>
+          <strong class="uppercase">Các giải đấu đang sắp đầy lượt đăng ký.</strong>
+        </h3>
+        <p class="text-neutral-40 font-thin xs:my-4 sm:max-w-[60%] sm:my-8" style="font-family: Inter; font-size: 20px;">
+          Cùng tham gia không giới hạn các giải đấu tại UGE để cạnh tranh và nhận phần thưởng hấp dẫn!
+        </p>
+      </div>
     </div>
-</div>
-
-<div class="upcoming">
-<strong class="uppercase">Upcoming Tournament</strong>
-</div>
-
-
-<div>
-  <div class="sort-tour">
-    <label for="sortBy"></label>
-    <select v-model="selectedGame" id="sortBy" @change="sortTournaments">
-      <option value="All Games">All Games</option>
-      <option v-for="game in uniqueGames" :value="game">{{ game }}</option>
-    </select>
   </div>
-  
-  <div v-for="tournament in sortTournaments" :key="tournament.id">
-    
+
+  <div class="upcoming">
+    <strong class="uppercase">Upcoming Tournament</strong>
   </div>
-</div>
+
+
+  <div>
+    <div class="sort-tour">
+      <label for="sortBy"></label>
+      <select v-model="selectedGame" id="sortBy" @change="sortTournaments">
+        <option value="All Games">All Games</option>
+        <option v-for="game in uniqueGames" :value="game">{{ game }}</option>
+      </select>
+    </div>
+
+    <div v-for="tournament in sortTournaments" :key="tournament.id">
+
+    </div>
+  </div>
 
 
 
@@ -63,7 +62,7 @@
         {{ loading ? 'Loading...' : 'Show More' }}
       </button>
     </div>
- 
+
     <div class="loading-container" v-if="loading">
       <div class="loading-indicator">
         <div class="loader"></div>
@@ -89,13 +88,13 @@ const selectedGame = ref('All Games');
 const uniqueGames = computed(() => {
   const uniqueGameTypes = [];
   tournaments.value.forEach((tournament) => {
-    if (!uniqueGameTypes.includes(tournament.gameType) ) {
+    if (!uniqueGameTypes.includes(tournament.gameType)) {
       uniqueGameTypes.push(tournament.gameType);
     }
   });
   return uniqueGameTypes;
 });
-  
+
 
 
 const sortTournaments = () => {
@@ -105,19 +104,19 @@ const sortTournaments = () => {
     // filter and sort tournaments by selected game type
     const sortedTournaments = tournaments.value
       .filter((tournament) => tournament.gameType === selectedGame.value)
-      .slice(0, 10); 
+      .slice(0, 10);
 
-      tournaments.value = sortedTournaments
-  
+    tournaments.value = sortedTournaments
+
   }
 }
 
 
 const handleClick = () => {
-  loading.value = true; 
+  loading.value = true;
   setTimeout(() => {
     itemShow.value += 6;
-    loading.value = false; 
+    loading.value = false;
   }, 2000);
 };
 
@@ -128,38 +127,42 @@ const handleClick = () => {
 </script>
 
 <style>
-.sort-tour{
+.sort-tour {
   margin-top: 20px;
   margin-left: 200px;
   max-width: 170px;
   max-height: 32px;
   border-radius: 0.375rem;
-  background-color: white; 
-  border: 1px solid #655c5c; 
-  padding: 4px; 
+  background-color: white;
+  border: 1px solid #655c5c;
+  padding: 4px;
 
 }
-.upcoming{
+
+.upcoming {
   font-style: normal;
-    font-weight: 800;
-    font-size: 28px;
-    line-height: 36px;
-    margin: 20px 0 0 200px;
-    font-weight: bold;
-    background: linear-gradient(0deg, #ff006b 0%, #885fff 101.5%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 36px;
+  margin: 20px 0 0 200px;
+  font-weight: bold;
+  background: linear-gradient(0deg, #ff006b 0%, #885fff 101.5%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 
 }
+
 .uppercase {
   text-transform: uppercase;
 }
 
-b, strong {
+b,
+strong {
   font-weight: bolder;
 }
+
 .slider-item__intro {
   position: absolute;
   left: 0;
@@ -205,21 +208,22 @@ b, strong {
 
 @media (max-width: 640px) {
   .slider-item__intro {
-      padding: 1rem;
+    padding: 1rem;
   }
 
   .slider-item__intro h3 {
-      font-size: 20px;
+    font-size: 20px;
   }
 
   .slider-item__intro p {
-      max-width: 70%;
+    max-width: 70%;
   }
 }
 
-.tournament-grid{
+.tournament-grid {
   padding: 20px 200px 0px 200px;
 }
+
 .loading-indicator {
   display: flex;
   align-items: center;
@@ -308,7 +312,7 @@ b, strong {
 .tournament-card:hover .tournament-overlay {
   opacity: 1;
 
-} 
+}
 
 .tournament-title {
   font-weight: bold;
@@ -318,6 +322,4 @@ b, strong {
 .tournament-info {
   margin-top: 5px;
   font-size: 1.5rem;
-}
-
-</style>
+}</style>
