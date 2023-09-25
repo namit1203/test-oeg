@@ -28,7 +28,7 @@
       "totalTeam": 24,
       "registrationFee": "800,000 vnđ",
       "tournamentFormat": "Single Elimination",
-      "checkinTime":"30 phút trước khi giải đấu bắt đầu",
+      "checkinTime": "30 phút trước khi giải đấu bắt đầu",
       "teamSize": "5vs5",
       "image": "https://www.dexerto.com/cdn-cgi/image/width=3840,quality=75,format=auto/https://editors.dexerto.com/wp-content/uploads/2021/12/14/league-of-legends-2022-patch-schedule-all-lol-season-12-updates-changes.jpg",
       "website": "https://example.com/lol-championship"
@@ -45,7 +45,7 @@
       "totalTeam": 20,
       "registrationFee": "600,000 vnđ",
       "tournamentFormat": "Single Elimination",
-      "checkinTime":"30 phút trước khi giải đấu bắt đầu",
+      "checkinTime": "30 phút trước khi giải đấu bắt đầu",
       "teamSize": "5vs5",
       "image": "https://genk.mediacdn.vn/139269124445442048/2023/3/23/cs2-1679530147879794733797-1679530422473-16795304225911207505362.png",
       "website": "https://example.com/csgo-pro-league"
@@ -252,6 +252,48 @@
       "award": "1,000,000 vnđ",
       "description": "ko",
       "id": 28
+    },
+    {
+      "type": "free",
+      "image": "https://khoinguonsangtao.vn/wp-content/uploads/2022/09/hinh-nen-lien-minh-toc-chien-2.jpg",
+      "gameType": "LOLMB",
+      "title": "Giải đấu solo 1vs1 tốc chiến",
+      "startDate": "2023-09-27T09:00",
+      "endDate": "2023-09-30T22:00",
+      "tournamentFormat": "Single Elimination",
+      "totalTeam": "16",
+      "award": "500,000 VNĐ",
+      "description": "no",
+      "checkinTime": "30 minute before the tournament start",
+      "id": 29
+    },
+    {
+      "type": "free",
+      "image": "https://mega.com.vn/media/news/0905_Hinh-nen.jpg",
+      "gameType": "League Of Legends",
+      "title": "Liên Quân Mobile: Đấu trường danh vọng",
+      "startDate": "2023-09-28T14:17",
+      "endDate": "2023-09-30T14:17",
+      "tournamentFormat": "Single Elimination",
+      "totalTeam": "16",
+      "award": "1,000,000 vnđ",
+      "description": "ko",
+      "checkinTime": "ok",
+      "id": 30
+    },
+    {
+      "type": "free",
+      "image": "https://tungphatcomputer.com/wp-content/uploads/2021/07/download-aoe.jpg",
+      "gameType": "Dota 2",
+      "title": "AOE Championship",
+      "startDate": "2023-09-14T14:18",
+      "endDate": "2023-10-01T14:18",
+      "tournamentFormat": "Single Elimination",
+      "totalTeam": "16",
+      "award": "1,000,000 vnđ",
+      "description": "ko",
+      "checkinTime": "ok",
+      "id": 31
     }
   ],
   "comments": [

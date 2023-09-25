@@ -1,5 +1,5 @@
 <template>
-    <AddNewTournament></AddNewTournament>
+    <add-tour></add-tour>
   </template>
   
   <script setup>

@@ -21,14 +21,14 @@
           </h3>
         </div>
 
-
         <div>
           <button class="btn-join">Join</button>
         </div>
 
       </div>
-
     </div>
+
+
     <div class="py-3 xs:px-4 sm:px-8 items-center text-white bg-black-4 " style="row-gap: 16px">
       <div class="flex flex-row flex-1 ">
         <div class="info">
@@ -276,10 +276,6 @@ const { data: tournament } = await useFetch(uri);
   text-align: left;
 }
 
-.slider-item__intro__inner {
-  max-width: 100%;
-  margin: 0 auto;
-}
 
 .btn-join {
   background-image: linear-gradient(to right, #FF006B var(--tw-gradient-from-position), #885FFF var(--tw-gradient-to-position));

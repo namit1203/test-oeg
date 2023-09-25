@@ -1,14 +1,15 @@
 <template>
     <div class="min-h-screen bg-black-5">
         <div class="bg-black-5" style="background: transparent;" id="wrapper">
-            <div class="general-info-container relative justify-end flex flex-col xs:px-4 xs:py-10 md:px-56 bg-cover bg-no-repeat w-full bg-black-5 xs:h-fit xs:min-h-[400px] xs:max-h-[440px] sm:min-h-[400px] sm:max-h-[440px]"
+            <div class="relative justify-end flex flex-col xs:px-4 xs:py-10 md:px-56 bg-cover bg-no-repeat w-full bg-black-5 xs:h-fit xs:min-h-[400px] xs:max-h-[440px] sm:min-h-[400px] sm:max-h-[440px]"
                 style="background-image: url(https://beta.ugesports.xyz/assets/banner-01.f88e9bb5.jpg);">
+                <div class="overlay"></div>
                 <div class="avt-name">
                     <div>
                         <img src="https://beta.ugesports.xyz/assets/avatar-host.a189d152.svg" alt="avt"
                             style="width: 120px; height: 120px; line-height: 120px; font-size: 18px;">
                     </div>
-                    <div class="">
+                    <div class="image-title1">
                         <div class="flex flex-row items-center">
                             <p
                                 class="font-extrabold text-2xl mr-2 mb-1 whitespace-nowrap text-ellipsis overflow-hidden max-w-[300px] text-white">
@@ -20,18 +21,21 @@
                     <div class="btn-setting">
                         <button type="button" class="btn-primary">
                             <div>
-                                <img class="setting-img"
-                                    src="https://beta.ugesports.xyz/assets/settings-03.d0077e00.svg">
-                                </div>
-                                    <span>Cài đặt</span>
+                                <img class="setting-img" src="https://beta.ugesports.xyz/assets/settings-03.d0077e00.svg">
+                            </div>
+                            <span style="">Cài đặt</span>
                         </button>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="min-h-screen">
+            <div class="bg-black-5" style="background: transparent;" id="wrapper">
 
-
+            </div>
+        </div>
     </div>
+
 </template>
 
 <script>
@@ -41,52 +45,59 @@ export default {
 </script>
 
 <style>
-.btn-primary {
-    background-color: #007bff; 
-    color: white;
-    border: none; 
-    
-    display: flex; 
-    align-items: center; 
-    align-items: center;
-  background-image: linear-gradient(135deg, #f34079 40%, #fc894d);
-  border: 0;
-  border-radius: 10px;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: flex;
-  flex-direction: row;
-  font-family: "Codec cold",sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  height: 54px;
-  justify-content: center;
-  letter-spacing: .4px;
-  line-height: 1;
-  max-width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 3px;
-  text-decoration: none;
-  text-transform: uppercase;
-  user-select: none;
+.image-title1{
+    z-index: 1;
+}
+.btn-setting {
+    margin-left: 1000px;
+    z-index: 1;
+}
 
-  touch-action: manipulation;
+.btn-primary {
+  
+    z-index: 2;
+    
+    background-color: #007bff;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #f34079 40%, #fc894d), #007bff;
+    border: 0;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    font-family: "Codec cold", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    height: 54px;
+    justify-content: center;
+    letter-spacing: .4px;
+    line-height: 1;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    user-select: none;
+    touch-action: manipulation;
 }
 
 .btn-primary img {
-    width: 20px; 
-    height: 20px; 
-    margin-right: 5px; 
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
 }
-
 
 .btn-primary span {
-    white-space: nowrap; 
+    white-space: nowrap;
 }
 
-.btn-setting{
+.btn-setting {
     display: grid;
     grid-template-columns: 120px auto;
 }
@@ -97,9 +108,18 @@ export default {
     grid-template-columns: 120px auto;
     grid-column-gap: 20px;
     align-items: center;
-
 }
 
-
-
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    max-width: 1528px;
+    max-height: 420px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    pointer-events: none;
+}
 </style>

@@ -83,6 +83,7 @@ const itemShow = ref(10);
 const arr = computed(() => tournaments.value.slice(0, itemShow.value));
 const loading = ref(false);
 
+
 const selectedGame = ref('All Games');
 
 const uniqueGames = computed(() => {
@@ -96,6 +97,7 @@ const uniqueGames = computed(() => {
 });
   
 
+
 const sortTournaments = () => {
   if (selectedGame.value === 'All Games') {
     itemShow.value = 10;
@@ -105,19 +107,21 @@ const sortTournaments = () => {
       .filter((tournament) => tournament.gameType === selectedGame.value)
       .slice(0, 10); 
 
-    tournaments.value = sortedTournaments;
+      tournaments.value = sortedTournaments
+  
   }
-};
+}
+
 
 const handleClick = () => {
-  loading.value = true; // set loading to true before the timeout
+  loading.value = true; 
   setTimeout(() => {
     itemShow.value += 6;
-    loading.value = false; // set loading to false after the timeout
+    loading.value = false; 
   }, 2000);
 };
 
-const taskTour = useTournamentStore()
+// const taskTour = useTournamentStore()
 
 
 
